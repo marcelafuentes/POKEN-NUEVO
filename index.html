@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link type="text/css" href="./css/style.css" rel="stylesheet" />
+</head>
+ 
+<body>
+ 
+    <div id="registrar">
+<a href="./php/registro.php"</a>CHECK IN</a>
+</div> <!-- fin opcion-->
+ 
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera" >
+                <img src="images/pikachus.png" width="150" height="150"/>
+            </div>
+ 
+            <div id="cuerpo">
+                <form id="form-login" action="" method="post" autocomplete="off">
+                    <!--A saber, el atributo for funciona como el id.-->
+                    <!--ejemplo <label for="usuario">Usuario:</label>-->
+                    <!--required es nuevo en html5, si el campo está vacío te avisa, pero cuidado, no valida la información-->
+                    <p><label >USER:</label></p>
+                        <input name="USER" type="text" id="USER" placeholder="ENTER USER" autofocus="" required=""></p>
+ 
+                    <p><label>PASSWORD:</label></p>
+                        <input name="PASSWORD" type="PASSWORD" id="PASSWORD" placeholder="ENTER PASSWORD" required=""></p>
+ 
+                    <p id="bot"><input type="submit" id="submit" name="submit" value="Ingresar" class="boton"></p>
+                </form>
+            </div><!--fin cuerpo-->
+ 
+            <div id="pie">LOGIN AND REGISTRATION SYSTEM</div>
+        </div><!-- fin contenedor -->
+    </div><!--fin envoltura-->
+
+
+    <!-- Bootstrap Framework -->
+<script src="lib/boo/js/bootstrap.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<script src="controller/controller.js"></script>
+
+</body>
+</html>
+</body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
