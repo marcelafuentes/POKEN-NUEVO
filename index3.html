@@ -37,7 +37,36 @@
             <div class="divInfo">
               <!-- Pokemon Picture -->
               <!-- <img class="pokePicture" src="{{x.sprites.front_default}}" alt="Poke"> -->
-              <img class="pokePicture" src="{{x.data.sprites.front_default}}" alt="Poke">
+              <img class="pokePicture" src="{{x.data.sprites.front_default}}" alt="Poke" data-toggle="modal" data-target="{{'#myModal_' + x.data.id}}">
+              
+              <div id="{{'myModal_' + x.data.id}}" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+           <!-- Modal content-->
+           <div class="modal-content">
+              <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Informacion del Pokemon</h4>
+                </div>
+              <div class="modal-body">
+                <img class="pokePicture" src="{{x.data.sprites.front_default}}" alt="Poke" >
+                 <p>Nombre: {{x.data.name}}</p>
+                 <p>Peso: {{x.data.weight}}</p>
+                 <p>Altura: {{x.data.height}}</p>
+                 <p>Experiencia: {{x.data.base_experience}}</p>
+                 <p>Tipo:
+                 <div  ng-repeat="y in x.data.types">
+            <p>{{y.type.name}}
+                 </div>
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+             </div>
+
+          </div>
+         </div>
+
             </div>
             <!-- <div class="pokeName">{{x.data.name}}</div> -->
             <div class="pokeName"> {{x.data.name}} </div>
@@ -48,7 +77,7 @@
     <!-- AngularJS v1 Framework -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!-- Function's File -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>}
   </body>
